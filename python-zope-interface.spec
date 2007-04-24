@@ -1,16 +1,18 @@
-%define         tarname  ZopeInterface
+%define         tarname  zope.interface
+%define		name python-zope-interface
+%define 	version 3.3.0
 
-Summary:        A zope module providing 
-Name:           python-zope-interface
-Version:        3.0.1
-Release:        %mkrel 2
-Source0:        http://www.zope.org/Products/ZopeInterface/3.0.1final/%{tarname}-%{version}.tar.bz2
-Patch:          python-zope-interface.gcc4.patch
+Summary:        Zope Interface module for Python
+Name:           %{name}
+Version:        %{version}
+Release:        %mkrel 1
+Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.tar.bz2
 License:        Zope Public License
 Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel
+Requires:	python
 
 %description
 This package provides the zope Interface module.
@@ -28,12 +30,10 @@ through:
 
 Attribute definitions specify specific attributes. They define the
 attribute name and provide documentation and constraints of attribute
-values. Attribute definitions can take a number of forms, as we'll
-see below.
+values. Attribute definitions can take a number of forms.
 
 %prep
 %setup -q -n %{tarname}-%{version} 
-%patch0
 
 %build
 %__python setup.py build
@@ -49,5 +49,3 @@ see below.
 %defattr(-,root,root)
 %doc README.txt
 %py_platsitedir/zope*
-
-
