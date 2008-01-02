@@ -10,6 +10,7 @@ Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}
 License:        Zope Public License
 Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
+BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel
 Requires:	python
 
