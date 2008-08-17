@@ -1,12 +1,12 @@
 %define         tarname  zope.interface
 %define		name python-zope-interface
-%define 	version 3.3.0
+%define 	version 3.4.1
 
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel 4
-Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.tar.bz2
+Release:        %mkrel 1
+Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.tar.lzma
 License:        Zope Public License
 Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
@@ -39,13 +39,12 @@ values. Attribute definitions can take a number of forms.
 %__python setup.py build
 
 %install
-%__rm -rf %buildroot
-%__python setup.py install --root  %buildroot
+%__rm -rf %{buildroot}
+%__python setup.py install --root=%{buildroot} --record=FILELIST
 
 %clean
-%__rm -rf %buildroot
+%__rm -rf %{buildroot}
 
-%files
+%files -f FILELIST
 %defattr(-,root,root)
-%doc README.txt
-%py_platsitedir/zope*
+%doc *.txt
