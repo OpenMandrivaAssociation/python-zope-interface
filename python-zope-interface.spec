@@ -5,7 +5,7 @@
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel 1
+Release:        %mkrel 2
 Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.tar.lzma
 License:        Zope Public License
 Group:          Development/Python
