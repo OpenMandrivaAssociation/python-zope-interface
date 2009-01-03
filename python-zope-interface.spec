@@ -1,12 +1,12 @@
 %define         tarname  zope.interface
 %define		name python-zope-interface
-%define 	version 3.4.1
+%define 	version 3.5.0
 
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
 Release:        %mkrel 2
-Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.tar.lzma
+Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.zip
 License:        Zope Public License
 Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
@@ -19,7 +19,7 @@ This package provides the zope Interface module.
 
 Interfaces are objects that specify (document) the external behavior
 of objects that "provide" them.  An interface specifies behavior
-through: 
+through:
 
 - Informal documentation in a doc string
 
@@ -33,7 +33,7 @@ attribute name and provide documentation and constraints of attribute
 values. Attribute definitions can take a number of forms.
 
 %prep
-%setup -q -n %{tarname}-%{version} 
+%setup -q -n %{tarname}-%{version}
 
 %build
 %__python setup.py build
