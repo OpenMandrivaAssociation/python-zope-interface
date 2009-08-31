@@ -5,7 +5,7 @@
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel 2
+Release:        %mkrel 3
 Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.zip
 License:        Zope Public License
 Group:          Development/Python
@@ -40,7 +40,7 @@ values. Attribute definitions can take a number of forms.
 
 %install
 %__rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --record=FILELIST
+%__python setup.py install --root=%{buildroot} --install-purelib=%{py_platsitedir} --record=FILELIST
 
 %clean
 %__rm -rf %{buildroot}
