@@ -1,12 +1,12 @@
 %define         tarname  zope.interface
 %define		name python-zope-interface
-%define 	version 3.5.0
+%define 	version 3.5.2
 
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel 3
-Source0:        http://www.zope.org/Products/ZopeInterface/%{version}/%{tarname}-%{version}.zip
+Release:        %mkrel 1
+Source0:        http://pypi.python.org/packages/source/z/%{tarname}/%{tarname}-%{version}.tar.gz
 License:        Zope Public License
 Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
