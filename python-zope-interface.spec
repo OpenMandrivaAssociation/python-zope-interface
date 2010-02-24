@@ -1,6 +1,6 @@
 %define         tarname  zope.interface
 %define		name python-zope-interface
-%define 	version 3.5.2
+%define 	version 3.5.3
 
 Summary:        Zope Interface module for Python
 Name:           %{name}
