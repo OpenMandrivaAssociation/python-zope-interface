@@ -5,14 +5,13 @@
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel 1
+Release:        %mkrel 2
 Source0:        http://pypi.python.org/packages/source/z/%{tarname}/%{tarname}-%{version}.tar.gz
 License:        Zope Public License
 Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel
-Requires:	python
 
 %description
 This package provides the zope Interface module.
@@ -45,6 +44,7 @@ values. Attribute definitions can take a number of forms.
 %clean
 %__rm -rf %{buildroot}
 
-%files -f FILELIST
+%files
 %defattr(-,root,root)
 %doc *.txt
+%py_platsitedir/*
