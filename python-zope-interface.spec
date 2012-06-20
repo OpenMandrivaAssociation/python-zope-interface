@@ -1,11 +1,17 @@
-%define         tarname  zope.interface
-%define		name python-zope-interface
-%define 	version 3.6.1
+%define	tarname  zope.interface
+%define	name python-zope-interface
+%define version 4.0.1
+%define	rel		1
+%if %mdkversion < 201100
+%define	release	%mkrel %rel
+%else
+%define release	%rel
+%endif
 
 Summary:        Zope Interface module for Python
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel 2
+Release:        %{release}
 Source0:        http://pypi.python.org/packages/source/z/%{tarname}/%{tarname}-%{version}.tar.gz
 License:        Zope Public License
 Group:          Development/Python
@@ -21,9 +27,7 @@ of objects that "provide" them.  An interface specifies behavior
 through:
 
 - Informal documentation in a doc string
-
 - Attribute definitions
-
 - Invariants, which are conditions that must hold for objects that
   provide the interface
 
@@ -39,7 +43,7 @@ values. Attribute definitions can take a number of forms.
 
 %install
 %__rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --install-purelib=%{py_platsitedir} --record=FILELIST
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --install-purelib=%{py_platsitedir} 
 
 %clean
 %__rm -rf %{buildroot}
