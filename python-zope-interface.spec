@@ -18,6 +18,7 @@ Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel
+BuildRequires:	python-setuptools
 
 %description
 This package provides the zope Interface module.
