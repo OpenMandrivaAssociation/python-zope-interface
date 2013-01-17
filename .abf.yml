@@ -1,2 +1,3 @@
+---
 sources:
-  "zope.interface-4.0.1.tar.gz:"	35e34c4ba0490db60647328a47ee830e062f3f4c
+  zope.interface-4.0.1.tar.gz: 35e34c4ba0490db60647328a47ee830e062f3f4c
