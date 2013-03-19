@@ -10,7 +10,6 @@ Group:          Development/Python
 URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
-BuildArch:      noarch
 
 %description
 This package provides the zope Interface module.
