@@ -1,15 +1,15 @@
 %define	tarname  zope.interface
 
-Summary:        Zope Interface module for Python
-Name:           python-zope-interface
-Version:        4.0.5
-Release:        1
-Source0:        http://pypi.python.org/packages/source/z/zope.interface/zope.interface-%{version}.zip
-License:        Zope Public License
-Group:          Development/Python
-URL:            http://www.zope.org/Wikis/Interfaces/FrontPage
-BuildRequires:	python-devel
+Summary:	Zope Interface module for Python
+Name:		python-zope-interface
+Version:	4.0.5
+Release:	1
+License:	Zope Public License
+Group:		Development/Python
+Url:		http://www.zope.org/Wikis/Interfaces/FrontPage
+Source0:	http://pypi.python.org/packages/source/z/zope.interface/zope.interface-%{version}.zip
 BuildRequires:	python-setuptools
+BuildRequires:	pkgconfig(python)
 
 %description
 This package provides the zope Interface module.
@@ -28,7 +28,7 @@ attribute name and provide documentation and constraints of attribute
 values. Attribute definitions can take a number of forms.
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%setup -qn %{tarname}-%{version}
 
 %build
 %__python setup.py build
@@ -38,5 +38,5 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --instal
 
 %files
 %doc *.txt
-%py_platsitedir/*
+%{py_platsitedir}/*
 
