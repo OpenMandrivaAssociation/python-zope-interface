@@ -3,7 +3,7 @@
 Summary:	Zope Interface module for Python
 Name:		python-zope-interface
 Version:	4.0.5
-Release:	3
+Release:	4
 License:	Zope Public License
 Group:		Development/Python
 Url:		http://www.zope.org/Wikis/Interfaces/FrontPage
