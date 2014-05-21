@@ -9,6 +9,7 @@ License:	Zope Public License
 Group:		Development/Python
 Url:		http://www.zope.org/Wikis/Interfaces/FrontPage
 Source0:	http://pypi.python.org/packages/source/z/zope.interface/zope.interface-%{version}.tar.gz
+Source100: %{name}.rpmlintrc
 BuildRequires:	python-setuptools
 BuildRequires:	pkgconfig(python)
 
