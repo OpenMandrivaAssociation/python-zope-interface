@@ -1,3 +1,4 @@
+%define debug_package %nil
 %define	tarname  zope.interface
 %bcond_without python2
 
