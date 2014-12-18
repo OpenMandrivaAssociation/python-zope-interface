@@ -81,7 +81,11 @@ PYTHONDONTWRITEBYTECODE= python2 setup.py install --root=%{buildroot} --install-
 
 %files
 %doc python3/*.txt
-%{py_platsitedir}/*
+%{py_platsitedir}/zope
+%{py_platsitedir}/zope.interface-%{version}-*.egg-info
+%{py_platsitedir}/zope.interface-*.pth
 
 %files -n python2-zope-interface
-%{py2_platsitedir}/*
+%{py2_platsitedir}/zope
+%{py2_platsitedir}/zope.interface-%{version}-*.egg-info
+%{py2_platsitedir}/zope.interface-*.pth
