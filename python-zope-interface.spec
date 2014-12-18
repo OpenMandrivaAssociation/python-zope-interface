@@ -6,15 +6,17 @@ Summary:	Zope Interface module for Python
 
 Name:		python-zope-interface
 Version:	4.1.1
-Release:	8
+Release:	9
 License:	Zope Public License
 Group:		Development/Python
 Url:		http://www.zope.org/Wikis/Interfaces/FrontPage
 Source0:	http://pypi.python.org/packages/source/z/zope.interface/zope.interface-%{version}.tar.gz
 Source100: %{name}.rpmlintrc
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-setuptools
 %if %{with python2}
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python2-setuptools
 %endif
 
 %description
