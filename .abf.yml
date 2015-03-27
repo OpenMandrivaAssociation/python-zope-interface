@@ -1,4 +1,5 @@
 removed_sources:
   zope.interface-4.0.5.zip: 0a626c371a3321c196dd6e8687859cb0524c854b
-sources:
   zope.interface-4.1.1.tar.gz: 20a9284429e29eb8cc63eee5ed686c257c01b1fc
+sources:
+  zope.interface-4.1.2.tar.gz: 6d940ecd621df0437ee9deb17d03ba105c13f07f

@@ -5,8 +5,8 @@
 Summary:	Zope Interface module for Python
 
 Name:		python-zope-interface
-Version:	4.1.1
-Release:	9
+Version:	4.1.2
+Release:	1
 License:	Zope Public License
 Group:		Development/Python
 Url:		http://www.zope.org/Wikis/Interfaces/FrontPage
@@ -65,7 +65,7 @@ cp -a python3 python2
 
 %build
 cd python3
-%__python setup.py build
+python setup.py build
 
 %if %{with python2}
 cd ../python2
