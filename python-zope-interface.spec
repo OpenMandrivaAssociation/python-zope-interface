@@ -5,7 +5,7 @@
 Summary:	Zope Interface module for Python
 
 Name:		python-zope-interface
-Version:	5.0.2
+Version:	5.1.0
 Release:	1
 License:	Zope Public License
 Group:		Development/Python
