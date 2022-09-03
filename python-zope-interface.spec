@@ -1,11 +1,11 @@
 %define debug_package %nil
 %define	tarname  zope.interface
-%bcond_without python2
+%bcond_with python2
 
 Summary:	Zope Interface module for Python
 
 Name:		python-zope-interface
-Version:	5.2.0
+Version:	5.4.0
 Release:	1
 License:	Zope Public License
 Group:		Development/Python
