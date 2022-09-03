@@ -36,6 +36,7 @@ Attribute definitions specify specific attributes. They define the
 attribute name and provide documentation and constraints of attribute
 values. Attribute definitions can take a number of forms.
 
+%if %{with python2}
 %package -n python2-zope-interface
 Summary:	Zope Interface module for Python 2.x
 Group:		Development/Python
@@ -55,6 +56,7 @@ through:
 Attribute definitions specify specific attributes. They define the
 attribute name and provide documentation and constraints of attribute
 values. Attribute definitions can take a number of forms.
+%endif
 
 %prep
 %setup -qn %{tarname}-%{version}
@@ -88,7 +90,9 @@ PYTHONDONTWRITEBYTECODE= python2 setup.py install --root=%{buildroot} --install-
 %{py_platsitedir}/zope.interface-%{version}-*.egg-info
 %{py_platsitedir}/zope.interface-*.pth
 
+%if %{with python2}
 %files -n python2-zope-interface
 %{py2_platsitedir}/zope
 %{py2_platsitedir}/zope.interface-%{version}-*.egg-info
 %{py2_platsitedir}/zope.interface-*.pth
+%endif
