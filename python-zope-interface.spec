@@ -2,7 +2,7 @@
 
 Name:			python-zope-interface
 Version:	8.1.1
-Release:	1
+Release:	2
 Summary:	Zope Interface module for Python
 License:	ZPL-2.1
 Group:		Development/Python
@@ -16,6 +16,9 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
+# other packages require this provides
+Provides: python%{pyver}dist(zope-interface) = %{version}-%{release}
+Provides: python3dist(zope-interface) = %{version}-%{release}
 
 # Obsolete old duplicated package
 Obsoletes:	python-zope.interface < %{version}-%{release}
