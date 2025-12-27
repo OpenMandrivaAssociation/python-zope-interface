@@ -2,7 +2,7 @@
 
 Name:			python-zope-interface
 Version:	8.1.1
-Release:	3
+Release:	4
 Summary:	Zope Interface module for Python
 License:	ZPL-2.1
 Group:		Development/Python
@@ -20,7 +20,7 @@ BuildRequires:	python%{pyver}dist(wheel)
 Provides: python%{pyver}dist(zope-interface) = %{version}-%{release}
 
 # Obsolete old duplicated package
-Obsoletes:	python-zope.interface < %{version}-%{release}
+%rename python-zope.interface
 
 
 %description
@@ -42,6 +42,10 @@ values. Attribute definitions can take a number of forms.
 
 %prep
 %autosetup -n %{tarname}-%{version} -p1
+
+%build
+export LDFLAGS="%{optflags} -lpython%{pyver}"
+%py_build
 
 %files
 %doc README.rst
