@@ -1,13 +1,14 @@
-%define	tarname  zope.interface
+%define module zope.interface
+%define oname zope_interface
 
 Name:		python-zope-interface
-Version:	8.2
+Version:	8.3
 Release:	1
 Summary:	Zope Interface module for Python
 License:	ZPL-2.1
 Group:		Development/Python
-URL:			https://github.com/zopefoundation/zope.interface
-Source0:	https://github.com/zopefoundation/zope.interface/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+URL:		https://github.com/zopefoundation/zope.interface
+Source0:	%{URL}/archive/%{version}/%{name}-%{version}.tar.gz
 Source100: %{name}.rpmlintrc
 BuildSystem:  python
 BuildRequires:	make
@@ -45,4 +46,4 @@ export LDFLAGS="%{optflags} -lpython%{pyver}"
 %doc README.rst
 %license LICENSE.txt COPYRIGHT.txt
 %{python_sitearch}/zope
-%{python_sitearch}/zope_interface-%{version}.dist-info
+%{python_sitearch}/%{oname}-%{version}.dist-info
