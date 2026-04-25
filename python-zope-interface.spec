@@ -2,7 +2,7 @@
 %define oname zope_interface
 
 Name:		python-zope-interface
-Version:	8.3
+Version:	8.4
 Release:	1
 Summary:	Zope Interface module for Python
 License:	ZPL-2.1
