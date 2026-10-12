@@ -3,7 +3,7 @@
 
 Name:		python-zope-interface
 Version:	8.5
-Release:	1
+Release:	2
 Summary:	Zope Interface module for Python
 License:	ZPL-2.1
 Group:		Development/Python
